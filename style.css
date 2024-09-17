@@ -1,0 +1,131 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-greyish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    
+   --Light-gray: hsl(0, 0%, 81%);
+   --Light-grayish-blue: hsl(210, 46%, 95%);
+
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+
+
+}
+
+body {
+    margin: 0;
+    font-family: 'barlow semi condensed', sans-serif;
+    line-height: 1;
+    background-color: var(--Light-grayish-blue);
+    width: 100%;
+
+    display: grid;
+    place-content: center;
+
+
+}
+
+.bold-p {
+    font-weight: 600;
+    font-size: 1rem;
+   
+}
+.normal-p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--Slate-300);
+  
+}
+
+.name-img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name,
+.position {
+    margin: 0;
+}
+
+section {
+    border-radius: 10px;
+    padding: 2em;
+
+}
+
+.col-1 {
+    background-color: var(--moderate-violet);
+    color: var(--White);
+    
+   
+
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+    
+}
+.col-2 {
+    background-color: var(--very-dark-greyish-blue);
+    color: var(--White);
+}
+.col-3,
+.col-5 {
+    background-color: var(--White);
+    color: var(--Slate-900);
+}
+.col-4 {
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--White);
+  
+}
+
+
+/* GRID STYLING */
+
+.testimonial-grid {
+    padding: 1em;
+    display: grid;
+    gap: 1.5em;
+
+   
+
+
+}
+
+@media (min-width: 50em) {
+
+    .testimonial-grid {
+        padding: 4em;
+        display: grid;
+        gap: 1.5em;
+    
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .col-1 {
+        grid-column: span 2;
+    }
+
+    .col-4 {
+        grid-column: 2 / span 2;
+        grid-row: 2 / 3;
+    }
+
+    .col-5 {
+        grid-column: 4;
+        grid-row: 1 / 3;
+    }
+
+
+}
